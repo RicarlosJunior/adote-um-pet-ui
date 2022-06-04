@@ -70,7 +70,6 @@ export function useIndex(){
 
     };
 }
-
 /*{ 
     id: 1,
     nome: 'Puguinha',
