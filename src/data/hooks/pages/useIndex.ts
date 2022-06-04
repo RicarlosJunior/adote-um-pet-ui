@@ -70,17 +70,3 @@ export function useIndex(){
 
     };
 }
-/*{ 
-    id: 1,
-    nome: 'Puguinha',
-    historia: 'Dog Caramelo original, cachorro bruto rustico e sistematico',
-    foto: 'https://i.pinimg.com/736x/1d/71/96/1d7196c32a1b6ebdf886c357d7ed6599.jpg'
-
-    },
-    
-    { 
-    id: 2,
-    nome: 'Pakito',
-    historia: 'Cachorro...',
-    foto: 'https://th.bing.com/th/id/R.3128b5dde9d6411582511d3c4dae75e5?rik=zotHKgC8l32F%2fw&riu=http%3a%2f%2fc1.quickcachr.fotos.sapo.pt%2fi%2fo46017d99%2f5895897_O7C8a.jpeg&ehk=n9KGFXf2l3WN8otkwauCt9iS9tP1A9VOV5g7FBL1m9Y%3d&risl=&pid=ImgRaw&r=0'
-}*/
