@@ -77,6 +77,7 @@ export function useIndex(){
     foto: 'https://i.pinimg.com/736x/1d/71/96/1d7196c32a1b6ebdf886c357d7ed6599.jpg'
 
     },
+    
     { 
     id: 2,
     nome: 'Pakito',
