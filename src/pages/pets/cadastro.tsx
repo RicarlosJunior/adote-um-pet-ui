@@ -4,6 +4,19 @@ import Titulo from '../../ui/components/Titulo/Titulo';
 import { Paper, Grid, TextField, Button, Snackbar  } from '@mui/material'
 
 const Cadastro: NextPage = () => {
+    const {
+        nome,
+        historia,
+        foto,
+        setNome,
+        setHistoria,
+        setFoto,
+        cadastrar,
+        mensagem,
+        setMensagem
+    } = useCadastro();
+
+
     return (
         <>
             <Titulo 
@@ -13,12 +26,16 @@ const Cadastro: NextPage = () => {
                 <Grid container spacing={3}>
                     <Grid item xs={12}>
                         <TextField
+                            value={nome}
+                            onChange={(e)=> setNome(e.target.value)}
                             label={'Nome'}
                             placeholder={'Digite o nome do pet'}
                             fullWidth />
                     </Grid>
                     <Grid item xs={12}>
                     <TextField
+                            value={historia}
+                            onChange={(e) => setHistoria(e.target.value)}
                             label={'História'}
                             multiline
                             fullWidth
@@ -26,6 +43,8 @@ const Cadastro: NextPage = () => {
                     </Grid>
                     <Grid item xs={12}>
                         <TextField
+                            value={foto}
+                            onChange={(e) => setFoto(e.target.value)}
                             label={'Foto'}
                             placeholder={'Digite o endereço da imagem'}
                             fullWidth />
@@ -41,6 +60,7 @@ const Cadastro: NextPage = () => {
                     </Grid>
                     <Grid item xs={12} sx={{textAlign: 'center'}}>
                         <Button 
+                            onClick={cadastrar}
                             variant={'contained'}
                             fullWidth
                             sx={{maxWidth: {md:200}, mt:4}}>
@@ -49,7 +69,8 @@ const Cadastro: NextPage = () => {
                     </Grid>
                 </Grid>
             </Paper>
-            <Snackbar open={false} message={'Pet Cadastrado'}/>
+            <Snackbar open={mensagem.length > 0} message={mensagem} autoHideDuration={2500} onClose={() => setMensagem('')}/> 
+            
                
         </>
     )
